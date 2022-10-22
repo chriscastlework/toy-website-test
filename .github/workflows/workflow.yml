@@ -1,4 +1,4 @@
-name: deploy-toy-website-test-1
+name: deploy-toy-website-test
 concurrency: toy-company
 
 on:
