@@ -1,4 +1,4 @@
-name: deploy-toy-website-test-1
+name: deploy-toy-website-test
 concurrency: toy-company
 
 on:
@@ -30,7 +30,7 @@ jobs:
         name: Sign in to Azure
         with:
           client-id: ${{ secrets.AZURE_CLIENT_ID }}
-          tenant-id: 00a845cc-0827-4264-bb4d-6662c4fd7e33
+          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
           subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
       - uses: azure/arm-deploy@v1
         name: Run preflight validation
